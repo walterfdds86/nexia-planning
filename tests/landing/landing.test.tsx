@@ -34,4 +34,9 @@ describe('HeroSection', () => {
     render(<HeroSection demoUrl={DEMO_URL} />)
     expect(screen.getByText(/era 23h/i)).toBeInTheDocument()
   })
+
+  it('renders trust signal', () => {
+    render(<HeroSection demoUrl={DEMO_URL} />)
+    expect(screen.getByText(/sem cartão de crédito/i)).toBeInTheDocument()
+  })
 })
