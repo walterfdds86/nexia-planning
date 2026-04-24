@@ -10,9 +10,8 @@ export default function EconomicsSection() {
     <section className="bg-[#0f0f13] px-6 py-20">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-          Cada dossiê custa de{' '}
-          <span className="text-violet-400">cinquenta centavos a dois reais</span>{' '}
-          de API.
+          Cada dossiê custa entre{' '}
+          <span className="text-violet-400">R$0,50 e R$2,00</span> de API.
         </h2>
         <p className="text-zinc-400 text-lg mb-12">
           Você cobra o que quiser por cima.

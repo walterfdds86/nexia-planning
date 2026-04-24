@@ -96,8 +96,8 @@ import ForWhoSection from '@/components/landing/ForWhoSection'
 describe('EconomicsSection', () => {
   it('renders cost range and ROI', () => {
     render(<EconomicsSection />)
-    expect(screen.getByText(/R\$0,50/i)).toBeInTheDocument()
-    expect(screen.getByText(/R\$2,00/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/R\$0,50/i)[0]).toBeInTheDocument()
+    expect(screen.getAllByText(/R\$2,00/i)[0]).toBeInTheDocument()
   })
 })
 
