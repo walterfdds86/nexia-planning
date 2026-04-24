@@ -63,10 +63,11 @@ describe('HowItWorksSection', () => {
 })
 
 describe('DeliverablesSection', () => {
-  it('renders all 11 deliverables', () => {
+  it('renders deliverable titles and correct count', () => {
     render(<DeliverablesSection />)
     expect(screen.getByText(/posicionamento estratégico/i)).toBeInTheDocument()
     expect(screen.getByText(/calendário de conteúdo/i)).toBeInTheDocument()
     expect(screen.getByText(/cálculo financeiro reverso/i)).toBeInTheDocument()
+    expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(11)
   })
 })
