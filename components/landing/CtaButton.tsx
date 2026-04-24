@@ -12,7 +12,7 @@ export default function CtaButton({ href, label, size = 'lg', className = '' }: 
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-block rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold transition-colors ${padding} ${className}`}
+      className={`inline-block rounded-xl bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-500 hover:to-violet-400 text-white font-bold transition-all duration-200 shadow-lg shadow-violet-900/40 hover:shadow-violet-700/50 hover:scale-[1.03] active:scale-[0.98] ${padding} ${className}`}
     >
       {label} →
     </a>

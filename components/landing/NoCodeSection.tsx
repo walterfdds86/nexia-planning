@@ -7,13 +7,13 @@ const CHAT_MESSAGES = [
 
 export default function NoCodeSection() {
   return (
-    <section className="bg-[#17171f] px-6 py-20">
+    <section className="bg-[#17171f] px-6 py-24">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span className="text-violet-400 text-sm font-bold uppercase tracking-wider">
+          <span className="inline-block bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4">
             Zero Código
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mt-3 mb-4 font-display">
             Você não precisa saber programar. Nem um pouco.
           </h2>
           <p className="text-zinc-400 text-lg leading-relaxed">
@@ -23,23 +23,35 @@ export default function NoCodeSection() {
           </p>
         </div>
 
-        <div className="bg-[#0f0f13] rounded-2xl border border-zinc-800 p-5 space-y-3">
-          {CHAT_MESSAGES.map((msg, i) => (
-            <div
-              key={i}
-              className={`flex gap-3 ${msg.role === 'mentor' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-[80%] rounded-xl px-4 py-2.5 text-sm ${
-                  msg.role === 'mentor'
-                    ? 'bg-violet-600 text-white'
-                    : 'bg-[#1a1a2e] text-zinc-300 border border-zinc-700'
-                }`}
-              >
-                {msg.text}
-              </div>
+        <div className="bg-[#0f0f13] rounded-2xl border border-zinc-800 overflow-hidden shadow-xl shadow-black/30">
+          {/* Fake window chrome */}
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#17171f]">
+            <div className="flex gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+              <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
             </div>
-          ))}
+            <span className="text-zinc-600 text-xs ml-1">Nexia AI — Configuração</span>
+          </div>
+
+          <div className="p-5 space-y-3">
+            {CHAT_MESSAGES.map((msg, i) => (
+              <div
+                key={i}
+                className={`flex gap-3 ${msg.role === 'mentor' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
+                    msg.role === 'mentor'
+                      ? 'bg-gradient-to-r from-violet-600 to-violet-500 text-white shadow-md shadow-violet-900/30'
+                      : 'bg-[#1a1a2e] text-zinc-300 border border-zinc-700/60'
+                  }`}
+                >
+                  {msg.text}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

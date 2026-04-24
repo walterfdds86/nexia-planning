@@ -21,30 +21,26 @@ const STEPS = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="bg-[#0f0f13] px-6 py-20">
+    <section className="bg-[#0f0f13] px-6 py-24">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-4">
-          Como funciona
-        </h2>
-        <p className="text-zinc-400 text-center mb-14 text-lg">
-          Três passos. Sem complicação.
-        </p>
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 font-display">
+            Como funciona
+          </h2>
+          <p className="text-zinc-400 text-lg">Três passos. Sem complicação.</p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="bg-[#17171f] rounded-2xl p-8 border border-zinc-800"
+              className="group bg-[#17171f] rounded-2xl p-8 border border-zinc-800 hover:border-violet-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-950/20"
             >
-              <span className="text-violet-500 text-4xl font-extrabold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-violet-400 to-violet-600 text-5xl font-extrabold block mb-5 font-display">
                 {step.number}
               </span>
-              <h3 className="text-white text-xl font-bold mt-4 mb-2">
-                {step.title}
-              </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                {step.description}
-              </p>
+              <h3 className="text-white text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-zinc-400 text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

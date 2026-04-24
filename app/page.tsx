@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-[#0f0f13] font-sans">
+    <main className="min-h-screen bg-[#0f0f13] font-sans antialiased">
       <AnnouncementBar />
       <HeroSection demoUrl={DEMO_URL} />
       <ProblemSection />
