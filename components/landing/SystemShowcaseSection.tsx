@@ -491,17 +491,17 @@ export default function SystemShowcaseSection() {
   const screen = SCREENS[current]
 
   return (
-    <section className="bg-[#17171f] px-6 py-24">
+    <section className="bg-[#fafaf8] px-6 py-24">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-1 text-[#92650A] text-xs font-bold uppercase tracking-wider mb-4">
             Tour pelo Sistema
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-2 mb-4 font-display">
             Conheça o sistema por dentro
           </h2>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-gray-600 text-lg">
             Do cadastro do aluno até o dossiê entregue — tudo em uma plataforma.
           </p>
         </div>
@@ -516,7 +516,7 @@ export default function SystemShowcaseSection() {
               style={
                 i === current
                   ? { backgroundColor: EMERALD, color: '#fff' }
-                  : { backgroundColor: 'rgba(39,39,42,0.5)', color: '#71717a' }
+                  : { backgroundColor: 'rgba(0,0,0,0.06)', color: '#6b7280' }
               }
             >
               {s.label}
@@ -525,7 +525,7 @@ export default function SystemShowcaseSection() {
         </div>
 
         {/* Screen description */}
-        <p className="text-center text-zinc-500 text-sm mb-6">{screen.desc}</p>
+        <p className="text-center text-gray-500 text-sm mb-6">{screen.desc}</p>
 
         {/* Browser frame */}
         <div className="bg-[#1a1a2e] rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl shadow-black/40">
@@ -559,7 +559,7 @@ export default function SystemShowcaseSection() {
         <div className="flex items-center justify-center gap-4 mt-6">
           <button
             onClick={prev}
-            className="w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-zinc-300 hover:text-white transition-colors text-sm"
+            className="w-9 h-9 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors text-sm"
             aria-label="Tela anterior"
           >
             ←
@@ -571,7 +571,7 @@ export default function SystemShowcaseSection() {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className="w-2 h-2 rounded-full transition-all duration-200"
-                style={{ backgroundColor: i === current ? EMERALD : '#3f3f46' }}
+                style={{ backgroundColor: i === current ? EMERALD : '#d1d5db' }}
                 aria-label={`Ir para tela ${i + 1}`}
               />
             ))}
@@ -579,20 +579,20 @@ export default function SystemShowcaseSection() {
 
           <button
             onClick={next}
-            className="w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-zinc-300 hover:text-white transition-colors text-sm"
+            className="w-9 h-9 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors text-sm"
             aria-label="Próxima tela"
           >
             →
           </button>
         </div>
 
-        <p className="text-center text-zinc-600 text-xs mt-4">
+        <p className="text-center text-gray-400 text-xs mt-4">
           Acesse o sistema real e teste gratuitamente →{' '}
           <a
             href="https://nexia-planning.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-zinc-400 transition-colors"
+            className="text-[#92650A] underline hover:text-[#C9A84C] transition-colors"
           >
             nexia-planning.vercel.app
           </a>

@@ -1,4 +1,4 @@
-﻿// components/landing/SocialProofSection.tsx
+// components/landing/SocialProofSection.tsx
 
 const EMERALD = '#10b981'
 const EMERALD_DARK = '#059669'
@@ -6,7 +6,7 @@ const EMERALD_DARK = '#059669'
 function PdfCover() {
   return (
     <div
-      className="bg-white rounded-xl overflow-hidden flex flex-col shadow-2xl shadow-black/60 flex-shrink-0"
+      className="bg-white rounded-xl overflow-hidden flex flex-col shadow-2xl shadow-gray-300/60 flex-shrink-0"
       style={{ width: 200 }}
     >
       {/* Top green accent bar */}
@@ -78,7 +78,7 @@ function PdfContentPage() {
   ]
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden flex flex-col shadow-xl shadow-black/40">
+    <div className="bg-white rounded-xl overflow-hidden flex flex-col shadow-xl shadow-gray-300/40">
       {/* Page header — matches real PDF header */}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100">
         <div className="flex items-center gap-2">
@@ -183,16 +183,16 @@ function PdfContentPage() {
 
 export default function SocialProofSection() {
   return (
-    <section className="bg-[#0f0f13] px-6 py-24">
+    <section className="bg-[#f5f4f0] px-6 py-24">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-1 text-[#92650A] text-xs font-bold uppercase tracking-wider mb-4">
             Produto Real
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-2 mb-4 font-display">
             Veja na prática como fica
           </h2>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-gray-600 text-lg">
             O dossiê que o seu aluno vai receber — gerado em 5 minutos.
           </p>
         </div>
@@ -201,7 +201,7 @@ export default function SocialProofSection() {
           {/* Left: PDF Cover */}
           <div className="flex flex-col items-center gap-3 flex-shrink-0 mx-auto md:mx-0">
             <PdfCover />
-            <span className="text-zinc-500 text-xs flex items-center gap-1.5">
+            <span className="text-gray-500 text-xs flex items-center gap-1.5">
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0"
                 style={{ backgroundColor: EMERALD }}
@@ -213,7 +213,7 @@ export default function SocialProofSection() {
           {/* Right: PDF Content */}
           <div className="flex-1 flex flex-col gap-3 min-w-0">
             <PdfContentPage />
-            <span className="text-zinc-500 text-xs flex items-center gap-1.5">
+            <span className="text-gray-500 text-xs flex items-center gap-1.5">
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0"
                 style={{ backgroundColor: EMERALD }}
@@ -223,7 +223,7 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        <p className="text-zinc-600 text-xs text-center mt-8">
+        <p className="text-gray-400 text-xs text-center mt-8">
           Dossiê de demonstração · Acesse o sistema e gere o seu gratuitamente
         </p>
       </div>

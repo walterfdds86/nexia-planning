@@ -1,4 +1,4 @@
-﻿const FEATURES = [
+const FEATURES = [
   { icon: '🏷️', text: 'Seu nome, sua logo, suas cores no PDF' },
   { icon: '🧠', text: 'Até 500K caracteres da sua metodologia injetados em cada geração' },
   { icon: '🎙️', text: 'Prompt personalizado: o dossiê soa exatamente como você escreveria' },
@@ -7,16 +7,16 @@
 
 export default function WhiteLabelSection() {
   return (
-    <section className="bg-[#0f0f13] px-6 py-24">
+    <section className="bg-white px-6 py-24">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-14">
-          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-1 text-[#92650A] text-xs font-bold uppercase tracking-wider mb-4">
             100% Você
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-2 mb-4 font-display">
             O aluno nunca sabe que é uma plataforma terceirizada.
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
             O sistema aprende a sua metodologia. Você injeta seus materiais,
             frameworks e linguagem. O aluno recebe um documento que parece ter
             sido escrito por você — porque, na prática, foi.
@@ -27,12 +27,12 @@ export default function WhiteLabelSection() {
           {FEATURES.map((feature) => (
             <div
               key={feature.text}
-              className="group flex gap-4 bg-[#17171f] rounded-xl p-5 border border-zinc-800 hover:border-[#7A5C20]/50 hover:bg-zinc-800/30 transition-all duration-200"
+              className="group flex gap-4 bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-[#C9A84C]/50 hover:bg-amber-50/30 transition-all duration-200"
             >
               <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center shrink-0 text-xl group-hover:bg-[#C9A84C]/20 transition-colors duration-200">
                 {feature.icon}
               </div>
-              <p className="text-zinc-300 text-sm leading-relaxed self-center">{feature.text}</p>
+              <p className="text-gray-700 text-sm leading-relaxed self-center">{feature.text}</p>
             </div>
           ))}
         </div>

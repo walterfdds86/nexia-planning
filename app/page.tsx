@@ -43,7 +43,7 @@ export default function LandingPage() {
       <footer className="bg-[#0a0a0f] border-t border-zinc-900 px-6 py-8 text-center">
         <p className="text-zinc-600 text-sm">
           © {new Date().getFullYear()} Nexia Planning — NexIA Lab ·{' '}
-          <a href={DEMO_URL} className="text-violet-500 hover:underline">
+          <a href={DEMO_URL} className="text-[#C9A84C] hover:underline">
             Acessar sistema
           </a>
         </p>
