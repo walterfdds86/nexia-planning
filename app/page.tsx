@@ -3,6 +3,7 @@ import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
 import HowItWorksSection from '@/components/landing/HowItWorksSection'
+import SystemShowcaseSection from '@/components/landing/SystemShowcaseSection'
 import DeliverablesSection from '@/components/landing/DeliverablesSection'
 import WhiteLabelSection from '@/components/landing/WhiteLabelSection'
 import NoCodeSection from '@/components/landing/NoCodeSection'
@@ -30,6 +31,7 @@ export default function LandingPage() {
       <HeroSection demoUrl={DEMO_URL} />
       <ProblemSection />
       <HowItWorksSection />
+      <SystemShowcaseSection />
       <DeliverablesSection />
       <WhiteLabelSection />
       <NoCodeSection />
