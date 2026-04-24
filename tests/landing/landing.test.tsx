@@ -108,3 +108,26 @@ describe('ForWhoSection', () => {
     expect(screen.getByText(/não tem alunos/i)).toBeInTheDocument()
   })
 })
+
+import SocialProofSection from '@/components/landing/SocialProofSection'
+import FinalCtaSection from '@/components/landing/FinalCtaSection'
+
+describe('SocialProofSection', () => {
+  it('renders proof section heading', () => {
+    render(<SocialProofSection />)
+    expect(screen.getByText(/veja na prática/i)).toBeInTheDocument()
+  })
+})
+
+describe('FinalCtaSection', () => {
+  it('renders CTA link to demo', () => {
+    render(<FinalCtaSection demoUrl={DEMO_URL} />)
+    const link = screen.getByRole('link', { name: /quero começar agora/i })
+    expect(link).toHaveAttribute('href', DEMO_URL)
+  })
+
+  it('renders trust signals', () => {
+    render(<FinalCtaSection demoUrl={DEMO_URL} />)
+    expect(screen.getByText(/sem cartão de crédito/i)).toBeInTheDocument()
+  })
+})
