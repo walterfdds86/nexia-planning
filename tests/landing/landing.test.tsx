@@ -89,3 +89,22 @@ describe('NoCodeSection', () => {
     expect(screen.getByText(/muda a cor principal/i)).toBeInTheDocument()
   })
 })
+
+import EconomicsSection from '@/components/landing/EconomicsSection'
+import ForWhoSection from '@/components/landing/ForWhoSection'
+
+describe('EconomicsSection', () => {
+  it('renders cost range and ROI', () => {
+    render(<EconomicsSection />)
+    expect(screen.getByText(/R\$0,50/i)).toBeInTheDocument()
+    expect(screen.getByText(/R\$2,00/i)).toBeInTheDocument()
+  })
+})
+
+describe('ForWhoSection', () => {
+  it('renders yes and no qualifiers', () => {
+    render(<ForWhoSection />)
+    expect(screen.getByText(/mentores com alunos/i)).toBeInTheDocument()
+    expect(screen.getByText(/não tem alunos/i)).toBeInTheDocument()
+  })
+})
