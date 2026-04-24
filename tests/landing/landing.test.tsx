@@ -6,6 +6,8 @@ import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
 import HowItWorksSection from '@/components/landing/HowItWorksSection'
 import DeliverablesSection from '@/components/landing/DeliverablesSection'
+import WhiteLabelSection from '@/components/landing/WhiteLabelSection'
+import NoCodeSection from '@/components/landing/NoCodeSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app'
 
@@ -69,5 +71,21 @@ describe('DeliverablesSection', () => {
     expect(screen.getByText(/calendário de conteúdo/i)).toBeInTheDocument()
     expect(screen.getByText(/cálculo financeiro reverso/i)).toBeInTheDocument()
     expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(11)
+  })
+})
+
+describe('WhiteLabelSection', () => {
+  it('renders white-label key message', () => {
+    render(<WhiteLabelSection />)
+    expect(screen.getByText(/aluno nunca sabe/i)).toBeInTheDocument()
+    expect(screen.getByText(/500K caracteres/i)).toBeInTheDocument()
+  })
+})
+
+describe('NoCodeSection', () => {
+  it('renders no-code message', () => {
+    render(<NoCodeSection />)
+    expect(screen.getByText(/não precisa saber programar/i)).toBeInTheDocument()
+    expect(screen.getByText(/muda a cor principal/i)).toBeInTheDocument()
   })
 })
