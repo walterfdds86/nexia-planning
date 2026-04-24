@@ -13,9 +13,9 @@ const NO_ITEMS = [
 
 export default function ForWhoSection() {
   return (
-    <section className="bg-[#001F35] px-6 py-24">
+    <section className="bg-white px-6 py-24">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-14 font-display">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-14 font-display">
           Para quem é o Nexia Planning?
         </h2>
 
@@ -23,15 +23,15 @@ export default function ForWhoSection() {
           {YES_ITEMS.map((item) => (
             <div
               key={item}
-              className="flex gap-3 items-start bg-[#002848] rounded-xl p-4 border border-white/5 hover:border-emerald-900/40 transition-colors duration-200"
+              className="flex gap-3 items-start bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-emerald-200 transition-colors duration-200"
             >
               <CheckCircle2
                 size={18}
                 strokeWidth={1.5}
-                className="text-emerald-400 shrink-0 mt-0.5"
+                className="text-emerald-500 shrink-0 mt-0.5"
                 aria-hidden="true"
               />
-              <p className="text-zinc-300 text-sm leading-relaxed">{item}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
             </div>
           ))}
         </div>
@@ -40,7 +40,7 @@ export default function ForWhoSection() {
           {NO_ITEMS.map((item) => (
             <div
               key={item}
-              className="flex gap-3 items-start bg-[#002848] rounded-xl p-4 border border-white/5"
+              className="flex gap-3 items-start bg-gray-50 rounded-xl p-4 border border-gray-200"
             >
               <XCircle
                 size={18}
@@ -48,7 +48,7 @@ export default function ForWhoSection() {
                 className="text-red-400/70 shrink-0 mt-0.5"
                 aria-hidden="true"
               />
-              <p className="text-zinc-400 text-sm leading-relaxed">{item}</p>
+              <p className="text-gray-500 text-sm leading-relaxed">{item}</p>
             </div>
           ))}
         </div>

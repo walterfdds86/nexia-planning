@@ -9,7 +9,9 @@ import WhiteLabelSection from '@/components/landing/WhiteLabelSection'
 import NoCodeSection from '@/components/landing/NoCodeSection'
 import EconomicsSection from '@/components/landing/EconomicsSection'
 import ForWhoSection from '@/components/landing/ForWhoSection'
+import VsChatGPTSection from '@/components/landing/VsChatGPTSection'
 import SocialProofSection from '@/components/landing/SocialProofSection'
+import FAQSection from '@/components/landing/FAQSection'
 import FinalCtaSection from '@/components/landing/FinalCtaSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app/'
@@ -57,8 +59,10 @@ export default function LandingPage() {
       <WhiteLabelSection />
       <NoCodeSection />
       <EconomicsSection />
+      <VsChatGPTSection />
       <ForWhoSection />
       <SocialProofSection />
+      <FAQSection />
       <FinalCtaSection demoUrl={DEMO_URL} />
 
       <footer className="bg-[#001527] border-t border-zinc-900 px-6 py-8 text-center">
