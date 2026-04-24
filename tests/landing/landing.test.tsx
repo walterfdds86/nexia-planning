@@ -5,6 +5,7 @@ import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
 import HowItWorksSection from '@/components/landing/HowItWorksSection'
+import DeliverablesSection from '@/components/landing/DeliverablesSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app'
 
@@ -58,5 +59,14 @@ describe('HowItWorksSection', () => {
     expect(screen.getByText(/cadastra o aluno/i)).toBeInTheDocument()
     expect(screen.getByText(/clica em gerar/i)).toBeInTheDocument()
     expect(screen.getByText(/entrega em pdf/i)).toBeInTheDocument()
+  })
+})
+
+describe('DeliverablesSection', () => {
+  it('renders all 11 deliverables', () => {
+    render(<DeliverablesSection />)
+    expect(screen.getByText(/posicionamento estratégico/i)).toBeInTheDocument()
+    expect(screen.getByText(/calendário de conteúdo/i)).toBeInTheDocument()
+    expect(screen.getByText(/cálculo financeiro reverso/i)).toBeInTheDocument()
   })
 })
