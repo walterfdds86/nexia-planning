@@ -1,8 +1,11 @@
-const FEATURES = [
-  { icon: '🏷️', text: 'Seu nome, sua logo, suas cores no PDF' },
-  { icon: '🧠', text: 'Até 500K caracteres da sua metodologia injetados em cada geração' },
-  { icon: '🎙️', text: 'Prompt personalizado: o dossiê soa exatamente como você escreveria' },
-  { icon: '🤖', text: 'Funciona com Claude, GPT-4o ou Gemini — você escolhe' },
+import { Palette, BookMarked, Wand2, Bot } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+
+const FEATURES: { Icon: LucideIcon; text: string }[] = [
+  { Icon: Palette,     text: 'Seu nome, sua logo, suas cores no PDF' },
+  { Icon: BookMarked,  text: 'Até 500K caracteres da sua metodologia injetados em cada geração' },
+  { Icon: Wand2,       text: 'Prompt personalizado: o dossiê soa exatamente como você escreveria' },
+  { Icon: Bot,         text: 'Funciona com Claude, GPT-4o ou Gemini — você escolhe' },
 ]
 
 export default function WhiteLabelSection() {
@@ -24,15 +27,15 @@ export default function WhiteLabelSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-          {FEATURES.map((feature) => (
+          {FEATURES.map(({ Icon, text }) => (
             <div
-              key={feature.text}
+              key={text}
               className="group flex gap-4 bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-[#C9A84C]/50 hover:bg-amber-50/30 transition-all duration-200"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center shrink-0 text-xl group-hover:bg-[#C9A84C]/20 transition-colors duration-200">
-                {feature.icon}
+              <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors duration-200">
+                <Icon size={18} strokeWidth={1.5} className="text-[#C9A84C]" aria-hidden="true" />
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed self-center">{feature.text}</p>
+              <p className="text-gray-700 text-sm leading-relaxed self-center">{text}</p>
             </div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-﻿// components/landing/FinalCtaSection.tsx
+import { ShieldCheck, Zap, X } from 'lucide-react'
 import CtaButton from './CtaButton'
 
 interface FinalCtaSectionProps {
@@ -27,12 +27,21 @@ export default function FinalCtaSection({ demoUrl }: FinalCtaSectionProps) {
 
         <CtaButton href={demoUrl} label="Quero começar agora" />
 
-        <div className="flex items-center justify-center gap-6 mt-6 text-zinc-500 text-sm">
-          <span><span aria-hidden="true">🔒</span> Acesso seguro</span>
-          <span>·</span>
-          <span>Sem compromisso</span>
-          <span>·</span>
-          <span>Cancele quando quiser</span>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-zinc-500 text-sm">
+          <span className="flex items-center gap-1.5">
+            <ShieldCheck size={14} strokeWidth={1.5} aria-hidden="true" />
+            Acesso seguro
+          </span>
+          <span aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5">
+            <Zap size={14} strokeWidth={1.5} aria-hidden="true" />
+            Sem compromisso
+          </span>
+          <span aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5">
+            <X size={14} strokeWidth={1.5} aria-hidden="true" />
+            Cancele quando quiser
+          </span>
         </div>
       </div>
     </section>
