@@ -7,7 +7,7 @@
 
 export default function NoCodeSection() {
   return (
-    <section className="bg-[#17171f] px-6 py-24">
+    <section className="bg-[#002848] px-6 py-24">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
@@ -23,9 +23,9 @@ export default function NoCodeSection() {
           </p>
         </div>
 
-        <div className="bg-[#0f0f13] rounded-2xl border border-zinc-800 overflow-hidden shadow-xl shadow-black/30">
+        <div className="bg-[#001F35] rounded-2xl border border-zinc-800 overflow-hidden shadow-xl shadow-black/30">
           {/* Fake window chrome */}
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#17171f]">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#002848]">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
@@ -45,7 +45,7 @@ export default function NoCodeSection() {
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
                     msg.role === 'mentor'
                       ? 'bg-gradient-to-r from-[#C9A84C] to-[#C9A84C] text-white shadow-md shadow-[#2C1A00]/30'
-                      : 'bg-[#1a1a2e] text-zinc-300 border border-zinc-700/60'
+                      : 'bg-[#002848] text-zinc-300 border border-zinc-700/60'
                   }`}
                 >
                   {msg.text}

@@ -12,7 +12,7 @@ const STATS = [
 
 export default function HeroSection({ demoUrl }: HeroSectionProps) {
   return (
-    <section className="relative bg-[#0f0f13] px-6 py-24 md:py-36 text-center overflow-hidden">
+    <section className="relative bg-[#001F35] px-6 py-24 md:py-36 text-center overflow-hidden">
       {/* Background glow */}
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#C9A84C]/10 rounded-full blur-[120px]" />

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-[#0f0f13] font-sans antialiased">
+    <main className="min-h-screen bg-[#001F35] font-sans antialiased">
       <AnnouncementBar />
       <HeroSection demoUrl={DEMO_URL} />
       <ProblemSection />
@@ -40,7 +40,7 @@ export default function LandingPage() {
       <SocialProofSection />
       <FinalCtaSection demoUrl={DEMO_URL} />
 
-      <footer className="bg-[#0a0a0f] border-t border-zinc-900 px-6 py-8 text-center">
+      <footer className="bg-[#001527] border-t border-zinc-900 px-6 py-8 text-center">
         <p className="text-zinc-600 text-sm">
           © {new Date().getFullYear()} Nexia Planning — NexIA Lab ·{' '}
           <a href={DEMO_URL} className="text-[#C9A84C] hover:underline">

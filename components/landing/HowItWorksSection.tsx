@@ -21,7 +21,7 @@
 
 export default function HowItWorksSection() {
   return (
-    <section className="bg-[#0f0f13] px-6 py-24">
+    <section className="bg-[#001F35] px-6 py-24">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 font-display">
@@ -34,7 +34,7 @@ export default function HowItWorksSection() {
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="group bg-[#17171f] rounded-2xl p-8 border border-zinc-800 hover:border-[#7A5C20]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1A0E00]/20"
+              className="group bg-[#002848] rounded-2xl p-8 border border-zinc-800 hover:border-[#7A5C20]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1A0E00]/20"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#D4B85C] to-[#C9A84C] text-5xl font-extrabold block mb-5 font-display">
                 {step.number}

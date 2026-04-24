@@ -7,7 +7,7 @@ interface FinalCtaSectionProps {
 
 export default function FinalCtaSection({ demoUrl }: FinalCtaSectionProps) {
   return (
-    <section className="relative px-6 py-28 text-center overflow-hidden bg-[#0f0f13]">
+    <section className="relative px-6 py-28 text-center overflow-hidden bg-[#001F35]">
       {/* Background glow */}
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-[#2C1A00]/25 via-[#2C1A00]/10 to-transparent" />

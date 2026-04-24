@@ -34,7 +34,7 @@ function Sidebar({ active }: { active: ScreenId }) {
   return (
     <div
       className="w-36 flex flex-col flex-shrink-0 border-r border-zinc-800"
-      style={{ backgroundColor: '#0a0a12', height: '100%' }}
+      style={{ backgroundColor: '#001527', height: '100%' }}
     >
       {/* Brand */}
       <div className="p-3 border-b border-zinc-800 flex items-center gap-2">
@@ -91,12 +91,12 @@ function DashboardContent() {
   ]
 
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <p className="text-white text-sm font-bold mb-4">Bom dia, Walter 👋</p>
 
       <div className="grid grid-cols-2 gap-2 mb-4">
         {stats.map((s) => (
-          <div key={s.label} className="bg-[#17171f] rounded-lg p-3 border border-zinc-800">
+          <div key={s.label} className="bg-[#002848] rounded-lg p-3 border border-zinc-800">
             <p className="text-zinc-500 text-xs mb-1 truncate">{s.label}</p>
             <p className="text-xl font-extrabold font-display" style={{ color: s.color }}>
               {s.value}
@@ -116,7 +116,7 @@ function DashboardContent() {
             style={
               i === 0
                 ? { backgroundColor: EMERALD, color: '#fff' }
-                : { backgroundColor: '#17171f', border: '1px solid #27272a', color: '#d4d4d8' }
+                : { backgroundColor: '#002848', border: '1px solid #27272a', color: '#d4d4d8' }
             }
           >
             {a}
@@ -131,7 +131,7 @@ function DashboardContent() {
         {activities.map((act) => (
           <div
             key={act.text}
-            className="flex items-center gap-2 text-xs text-zinc-400 bg-[#17171f] rounded-lg px-3 py-2 border border-zinc-800/50"
+            className="flex items-center gap-2 text-xs text-zinc-400 bg-[#002848] rounded-lg px-3 py-2 border border-zinc-800/50"
           >
             <span>{act.icon}</span>
             <span className="flex-1 truncate">{act.text}</span>
@@ -153,7 +153,7 @@ function AlunosContent() {
   ]
 
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <div className="flex items-center justify-between mb-4">
         <p className="text-white text-sm font-bold">Meus Alunos</p>
         <div className="flex gap-2">
@@ -169,7 +169,7 @@ function AlunosContent() {
         </div>
       </div>
 
-      <div className="bg-[#17171f] rounded-xl border border-zinc-800 overflow-hidden">
+      <div className="bg-[#002848] rounded-xl border border-zinc-800 overflow-hidden">
         <table className="w-full text-xs">
           <thead className="border-b border-zinc-800">
             <tr>
@@ -213,11 +213,11 @@ function AlunosContent() {
       </div>
 
       <div className="flex gap-4 mt-4">
-        <div className="flex-1 bg-[#17171f] rounded-lg p-3 border border-zinc-800 text-center">
+        <div className="flex-1 bg-[#002848] rounded-lg p-3 border border-zinc-800 text-center">
           <p className="text-white text-lg font-extrabold">3</p>
           <p className="text-zinc-500 text-xs">Total de alunos</p>
         </div>
-        <div className="flex-1 bg-[#17171f] rounded-lg p-3 border border-zinc-800 text-center">
+        <div className="flex-1 bg-[#002848] rounded-lg p-3 border border-zinc-800 text-center">
           <p className="text-lg font-extrabold" style={{ color: EMERALD }}>67%</p>
           <p className="text-zinc-500 text-xs">Dossiês concluídos</p>
         </div>
@@ -237,14 +237,14 @@ function CadastroContent() {
   ]
 
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <p className="text-white text-sm font-bold mb-4">Cadastrar Novo Aluno</p>
 
-      <div className="bg-[#17171f] rounded-xl border border-zinc-800 p-4 space-y-3">
+      <div className="bg-[#002848] rounded-xl border border-zinc-800 p-4 space-y-3">
         {fields.map((f) => (
           <div key={f.label}>
             <label className="block text-zinc-400 text-xs font-medium mb-1">{f.label}</label>
-            <div className="bg-[#0f0f13] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-500 text-xs">
+            <div className="bg-[#001F35] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-500 text-xs">
               {f.placeholder}
             </div>
           </div>
@@ -254,7 +254,7 @@ function CadastroContent() {
           <label className="block text-zinc-400 text-xs font-medium mb-1">
             Principais objetivos
           </label>
-          <div className="bg-[#0f0f13] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-500 text-xs h-14">
+          <div className="bg-[#001F35] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-500 text-xs h-14">
             O que quer alcançar nos próximos 6 meses?
           </div>
         </div>
@@ -274,7 +274,7 @@ function CadastroContent() {
 
 function GerandoContent() {
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <div className="flex items-center gap-2 mb-4">
         <div className="flex gap-1">
           {[0, 1, 2].map((i) => (
@@ -286,12 +286,12 @@ function GerandoContent() {
           ))}
         </div>
         <p className="text-white text-sm font-bold">Gerando Dossiê — Ana Paula</p>
-        <span className="ml-auto text-zinc-500 text-xs bg-[#17171f] px-2 py-0.5 rounded border border-zinc-800">
+        <span className="ml-auto text-zinc-500 text-xs bg-[#002848] px-2 py-0.5 rounded border border-zinc-800">
           Coaching de Carreira
         </span>
       </div>
 
-      <div className="bg-[#17171f] rounded-xl border border-zinc-800 p-4 space-y-3 mb-4">
+      <div className="bg-[#002848] rounded-xl border border-zinc-800 p-4 space-y-3 mb-4">
         <div>
           <p className="text-xs font-bold mb-1.5 uppercase tracking-wide" style={{ color: EMERALD }}>
             1. Parabéns!
@@ -337,7 +337,7 @@ function GerandoContent() {
 
 function ConfigContent() {
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <p className="text-white text-sm font-bold mb-3">Configurações</p>
 
       {/* Tabs */}
@@ -349,7 +349,7 @@ function ConfigContent() {
             style={
               i === 0
                 ? { backgroundColor: EMERALD, color: '#fff' }
-                : { backgroundColor: '#17171f', border: '1px solid #27272a', color: '#71717a' }
+                : { backgroundColor: '#002848', border: '1px solid #27272a', color: '#71717a' }
             }
           >
             {tab}
@@ -359,7 +359,7 @@ function ConfigContent() {
 
       <div className="space-y-3">
         {/* Logo upload */}
-        <div className="bg-[#17171f] rounded-xl border border-zinc-800 p-3">
+        <div className="bg-[#002848] rounded-xl border border-zinc-800 p-3">
           <p className="text-zinc-300 text-xs font-semibold mb-2">Logo da Plataforma</p>
           <div className="border-2 border-dashed border-zinc-700 rounded-lg p-3 text-center">
             <p className="text-zinc-500 text-xs">📁 Clique para fazer upload</p>
@@ -372,16 +372,16 @@ function ConfigContent() {
           { label: 'Nicho de mercado', value: 'Marketing Digital e Inteligência Artificial' },
           { label: 'Promessa do programa', value: 'Resultados mensuráveis em 90 dias com IA' },
         ].map((f) => (
-          <div key={f.label} className="bg-[#17171f] rounded-xl border border-zinc-800 p-3">
+          <div key={f.label} className="bg-[#002848] rounded-xl border border-zinc-800 p-3">
             <p className="text-zinc-300 text-xs font-semibold mb-1.5">{f.label}</p>
-            <div className="bg-[#0f0f13] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-300 text-xs">
+            <div className="bg-[#001F35] border border-zinc-700 rounded-lg px-3 py-2 text-zinc-300 text-xs">
               {f.value}
             </div>
           </div>
         ))}
 
         {/* Colors */}
-        <div className="bg-[#17171f] rounded-xl border border-zinc-800 p-3">
+        <div className="bg-[#002848] rounded-xl border border-zinc-800 p-3">
           <p className="text-zinc-300 text-xs font-semibold mb-2">Cores do PDF</p>
           <div className="grid grid-cols-2 gap-2">
             {[
@@ -431,7 +431,7 @@ function DossieContent() {
   ]
 
   return (
-    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#0f0f13' }}>
+    <div className="flex-1 p-4 overflow-y-auto" style={{ backgroundColor: '#001F35' }}>
       <div className="flex items-center justify-between mb-4">
         <div>
           <p className="text-white text-sm font-bold">Ana Paula — Coaching de Carreira</p>
@@ -449,7 +449,7 @@ function DossieContent() {
         {sections.slice(0, 6).map((s, i) => (
           <div
             key={s}
-            className="bg-[#17171f] rounded-lg p-2.5 border border-zinc-800 flex items-start gap-2"
+            className="bg-[#002848] rounded-lg p-2.5 border border-zinc-800 flex items-start gap-2"
           >
             <div
               className="w-4 h-4 rounded-full flex items-center justify-center text-white flex-shrink-0 mt-0.5"
@@ -462,7 +462,7 @@ function DossieContent() {
         ))}
       </div>
 
-      <div className="bg-[#17171f] rounded-xl border border-zinc-800 p-3">
+      <div className="bg-[#002848] rounded-xl border border-zinc-800 p-3">
         <p
           className="text-xs font-bold uppercase tracking-wide mb-2"
           style={{ color: EMERALD }}
@@ -528,9 +528,9 @@ export default function SystemShowcaseSection() {
         <p className="text-center text-gray-500 text-sm mb-6">{screen.desc}</p>
 
         {/* Browser frame */}
-        <div className="bg-[#1a1a2e] rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl shadow-black/40">
+        <div className="bg-[#002848] rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl shadow-black/40">
           {/* Chrome */}
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#17171f]">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#002848]">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />

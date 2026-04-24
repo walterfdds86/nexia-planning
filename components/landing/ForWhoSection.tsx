@@ -12,7 +12,7 @@ const NO_ITEMS = [
 
 export default function ForWhoSection() {
   return (
-    <section className="bg-[#17171f] px-6 py-24">
+    <section className="bg-[#002848] px-6 py-24">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-14 font-display">
           Para quem é o Nexia Planning?
@@ -22,7 +22,7 @@ export default function ForWhoSection() {
           {YES_ITEMS.map((item) => (
             <div
               key={item}
-              className="flex gap-3 items-start bg-[#0f0f13] rounded-xl p-4 border border-zinc-800/80 hover:border-green-900/40 transition-colors duration-200"
+              className="flex gap-3 items-start bg-[#001F35] rounded-xl p-4 border border-zinc-800/80 hover:border-green-900/40 transition-colors duration-200"
             >
               <span className="text-green-400 text-lg shrink-0 mt-0.5">✅</span>
               <p className="text-zinc-300 text-sm leading-relaxed">{item}</p>
@@ -34,7 +34,7 @@ export default function ForWhoSection() {
           {NO_ITEMS.map((item) => (
             <div
               key={item}
-              className="flex gap-3 items-start bg-[#0f0f13] rounded-xl p-4 border border-zinc-800/80"
+              className="flex gap-3 items-start bg-[#001F35] rounded-xl p-4 border border-zinc-800/80"
             >
               <span className="text-red-400 text-lg shrink-0 mt-0.5">❌</span>
               <p className="text-zinc-300 text-sm leading-relaxed">{item}</p>

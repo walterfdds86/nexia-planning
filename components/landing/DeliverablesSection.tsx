@@ -14,7 +14,7 @@
 
 export default function DeliverablesSection() {
   return (
-    <section className="bg-[#17171f] px-6 py-24">
+    <section className="bg-[#002848] px-6 py-24">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 font-display">
@@ -27,7 +27,7 @@ export default function DeliverablesSection() {
           {DELIVERABLES.map((item) => (
             <div
               key={item.title}
-              className="group flex gap-4 bg-[#0f0f13] rounded-xl p-5 border border-zinc-800/80 hover:border-[#7A5C20]/40 transition-all duration-200 hover:bg-zinc-900/50"
+              className="group flex gap-4 bg-[#001F35] rounded-xl p-5 border border-zinc-800/80 hover:border-[#7A5C20]/40 transition-all duration-200 hover:bg-zinc-900/50"
             >
               <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center shrink-0 text-xl group-hover:bg-[#C9A84C]/20 transition-colors duration-200">
                 {item.icon}
