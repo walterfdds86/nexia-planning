@@ -3,6 +3,8 @@ import { describe, it, expect } from 'vitest'
 import CtaButton from '@/components/landing/CtaButton'
 import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
+import ProblemSection from '@/components/landing/ProblemSection'
+import HowItWorksSection from '@/components/landing/HowItWorksSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app'
 
@@ -38,5 +40,23 @@ describe('HeroSection', () => {
   it('renders trust signal', () => {
     render(<HeroSection demoUrl={DEMO_URL} />)
     expect(screen.getByText(/sem cartão de crédito/i)).toBeInTheDocument()
+  })
+})
+
+describe('ProblemSection', () => {
+  it('renders the contrast data', () => {
+    render(<ProblemSection />)
+    const contrastCards = screen.getAllByText(/3 horas|5 min/i)
+    expect(contrastCards.length).toBeGreaterThanOrEqual(2)
+    expect(screen.getByText(/com a sua metodologia/i)).toBeInTheDocument()
+  })
+})
+
+describe('HowItWorksSection', () => {
+  it('renders all 3 steps', () => {
+    render(<HowItWorksSection />)
+    expect(screen.getByText(/cadastra o aluno/i)).toBeInTheDocument()
+    expect(screen.getByText(/clica em gerar/i)).toBeInTheDocument()
+    expect(screen.getByText(/entrega em pdf/i)).toBeInTheDocument()
   })
 })
