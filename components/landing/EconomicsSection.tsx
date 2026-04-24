@@ -18,8 +18,9 @@ export default function EconomicsSection() {
         </h2>
         <p className="text-gray-600 text-lg mb-12">Você cobra o que quiser por cima.</p>
 
-        <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg shadow-gray-100">
-          <table className="w-full text-sm">
+        <div className="rounded-2xl border border-gray-200 shadow-lg shadow-gray-100 overflow-hidden">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-[420px] text-sm">
             <thead>
               <tr className="bg-gray-900 border-b border-gray-800">
                 <th scope="col" aria-label="Métrica" className="text-left px-6 py-4 text-gray-400 font-medium w-[40%]"></th>
@@ -40,6 +41,7 @@ export default function EconomicsSection() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </section>

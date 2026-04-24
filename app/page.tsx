@@ -18,9 +18,16 @@ export const metadata: Metadata = {
   title: 'Nexia Planning — Dossiês Estratégicos com IA para Mentores e Coaches',
   description:
     'Gere dossiês estratégicos personalizados para cada aluno em minutos, com a sua metodologia e a sua marca. White-label 100%. Sem código.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Nexia Planning — Dossiês Estratégicos com IA',
     description: 'De 3 horas por aluno para 5 minutos. Sua metodologia. Sua marca.',
+    url: '/',
+    siteName: 'Nexia Planning',
+    locale: 'pt_BR',
+    type: 'website',
   },
 }
 

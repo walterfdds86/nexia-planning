@@ -170,7 +170,8 @@ function AlunosContent() {
       </div>
 
       <div className="bg-[#002848] rounded-xl border border-zinc-800 overflow-hidden">
-        <table className="w-full text-xs">
+        <div className="overflow-x-auto">
+        <table className="w-full min-w-[360px] text-xs">
           <thead className="border-b border-zinc-800">
             <tr>
               {['Nome', 'Nicho', 'Status', 'Enviado', 'Ações'].map((h) => (
@@ -210,6 +211,7 @@ function AlunosContent() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
 
       <div className="flex gap-4 mt-4">
@@ -542,8 +544,10 @@ export default function SystemShowcaseSection() {
           </div>
 
           {/* Content */}
-          <div className="flex" style={{ height: 360 }}>
-            <Sidebar active={screen.id} />
+          <div className="flex h-[280px] md:h-[360px]">
+            <div className="hidden md:block">
+              <Sidebar active={screen.id} />
+            </div>
             <div className="flex-1 overflow-hidden">
               {current === 0 && <DashboardContent />}
               {current === 1 && <AlunosContent />}
