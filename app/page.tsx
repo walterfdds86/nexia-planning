@@ -28,6 +28,20 @@ export const metadata: Metadata = {
     siteName: 'Nexia Planning',
     locale: 'pt_BR',
     type: 'website',
+    images: [
+      {
+        url: '/api/og',
+        width: 1200,
+        height: 630,
+        alt: 'Nexia Planning — Dossiês Estratégicos com IA em 5 minutos',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nexia Planning — Dossiês Estratégicos com IA',
+    description: 'De 3 horas por aluno para 5 minutos. Sua metodologia. Sua marca.',
+    images: ['/api/og'],
   },
 }
 

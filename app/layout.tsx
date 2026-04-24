@@ -21,11 +21,6 @@ export const metadata: Metadata = {
     template: '%s | Nexia Planning',
   },
   description: 'Gere dossiês estratégicos personalizados para cada aluno em minutos, com a sua metodologia e a sua marca. White-label 100%. Sem código.',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nexia Planning — Dossiês Estratégicos com IA',
-    description: 'De 3 horas por aluno para 5 minutos. Sua metodologia. Sua marca.',
-  },
 }
 
 export default function RootLayout({
