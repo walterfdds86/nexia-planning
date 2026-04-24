@@ -27,3 +27,5 @@ yarn-error.log*
 
 # superpowers brainstorm files (local only)
 .superpowers/
+
+.vercel

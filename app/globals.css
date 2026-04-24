@@ -16,7 +16,7 @@ body {
 
 @layer utilities {
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-violet-300;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#D4B85C] to-[#E0C870];
   }
 }
 

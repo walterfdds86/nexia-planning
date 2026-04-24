@@ -1,4 +1,4 @@
-// components/landing/ForWhoSection.tsx
+﻿// components/landing/ForWhoSection.tsx
 const YES_ITEMS = [
   'Mentores com alunos ativos que precisam de planejamento personalizado',
   'Coaches que entregam planos de ação e acompanhamento',

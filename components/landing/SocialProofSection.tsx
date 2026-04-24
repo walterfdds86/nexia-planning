@@ -1,4 +1,4 @@
-// components/landing/SocialProofSection.tsx
+﻿// components/landing/SocialProofSection.tsx
 
 const EMERALD = '#10b981'
 const EMERALD_DARK = '#059669'
@@ -186,7 +186,7 @@ export default function SocialProofSection() {
     <section className="bg-[#0f0f13] px-6 py-24">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <span className="inline-block bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
             Produto Real
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">

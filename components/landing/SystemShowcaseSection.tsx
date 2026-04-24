@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 
@@ -495,7 +495,7 @@ export default function SystemShowcaseSection() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
             Tour pelo Sistema
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">

@@ -1,4 +1,4 @@
-const DELIVERABLES = [
+﻿const DELIVERABLES = [
   { icon: '📍', title: 'Posicionamento estratégico', description: 'Arquétipo de marca, Big Idea, bio profissional e headlines' },
   { icon: '👥', title: '2 Personas de cliente ideal', description: 'Perfil completo com dores, desejos e linguagem' },
   { icon: '💡', title: 'Ideias de produtos com IA', description: 'Sugestões de produtos com precificação estratégica' },
@@ -27,9 +27,9 @@ export default function DeliverablesSection() {
           {DELIVERABLES.map((item) => (
             <div
               key={item.title}
-              className="group flex gap-4 bg-[#0f0f13] rounded-xl p-5 border border-zinc-800/80 hover:border-violet-700/40 transition-all duration-200 hover:bg-zinc-900/50"
+              className="group flex gap-4 bg-[#0f0f13] rounded-xl p-5 border border-zinc-800/80 hover:border-[#7A5C20]/40 transition-all duration-200 hover:bg-zinc-900/50"
             >
-              <div className="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0 text-xl group-hover:bg-violet-500/20 transition-colors duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center shrink-0 text-xl group-hover:bg-[#C9A84C]/20 transition-colors duration-200">
                 {item.icon}
               </div>
               <div>

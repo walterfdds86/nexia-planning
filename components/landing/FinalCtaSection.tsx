@@ -1,4 +1,4 @@
-// components/landing/FinalCtaSection.tsx
+﻿// components/landing/FinalCtaSection.tsx
 import CtaButton from './CtaButton'
 
 interface FinalCtaSectionProps {
@@ -10,8 +10,8 @@ export default function FinalCtaSection({ demoUrl }: FinalCtaSectionProps) {
     <section className="relative px-6 py-28 text-center overflow-hidden bg-[#0f0f13]">
       {/* Background glow */}
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-violet-900/25 via-violet-900/10 to-transparent" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-600/15 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2C1A00]/25 via-[#2C1A00]/10 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#C9A84C]/15 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-2xl mx-auto">

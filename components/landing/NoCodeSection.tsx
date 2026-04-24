@@ -1,4 +1,4 @@
-const CHAT_MESSAGES = [
+﻿const CHAT_MESSAGES = [
   { role: 'mentor', text: 'Muda a cor principal para roxo', delay: '0.2s' },
   { role: 'ai', text: '✓ Cor primária atualizada para #7c3aed em toda a plataforma.', delay: '0.9s' },
   { role: 'mentor', text: 'Adiciona o meu logo no cabeçalho do PDF', delay: '1.7s' },
@@ -10,7 +10,7 @@ export default function NoCodeSection() {
     <section className="bg-[#17171f] px-6 py-24">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span className="inline-block bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
             Zero Código
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-3 mb-4 font-display">
@@ -44,7 +44,7 @@ export default function NoCodeSection() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
                     msg.role === 'mentor'
-                      ? 'bg-gradient-to-r from-violet-600 to-violet-500 text-white shadow-md shadow-violet-900/30'
+                      ? 'bg-gradient-to-r from-[#C9A84C] to-[#C9A84C] text-white shadow-md shadow-[#2C1A00]/30'
                       : 'bg-[#1a1a2e] text-zinc-300 border border-zinc-700/60'
                   }`}
                 >

@@ -1,4 +1,4 @@
-const STEPS = [
+﻿const STEPS = [
   {
     number: '01',
     title: 'Cadastra o aluno',
@@ -34,9 +34,9 @@ export default function HowItWorksSection() {
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="group bg-[#17171f] rounded-2xl p-8 border border-zinc-800 hover:border-violet-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-950/20"
+              className="group bg-[#17171f] rounded-2xl p-8 border border-zinc-800 hover:border-[#7A5C20]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1A0E00]/20"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-br from-violet-400 to-violet-600 text-5xl font-extrabold block mb-5 font-display">
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#D4B85C] to-[#C9A84C] text-5xl font-extrabold block mb-5 font-display">
                 {step.number}
               </span>
               <h3 className="text-white text-xl font-bold mb-3">{step.title}</h3>

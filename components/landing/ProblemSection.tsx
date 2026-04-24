@@ -1,4 +1,4 @@
-export default function ProblemSection() {
+﻿export default function ProblemSection() {
   return (
     <section className="bg-[#17171f] px-6 py-24">
       <div className="max-w-3xl mx-auto text-center">
@@ -27,10 +27,10 @@ export default function ProblemSection() {
             →
           </div>
 
-          <div className="flex-1 bg-[#1a1a2e] border border-violet-600/40 rounded-2xl p-7 text-left relative overflow-hidden shadow-lg shadow-violet-950/20">
-            <div aria-hidden="true" className="absolute inset-0 bg-violet-950/20 pointer-events-none" />
+          <div className="flex-1 bg-[#1a1a2e] border border-[#C9A84C]/40 rounded-2xl p-7 text-left relative overflow-hidden shadow-lg shadow-[#1A0E00]/20">
+            <div aria-hidden="true" className="absolute inset-0 bg-[#1A0E00]/20 pointer-events-none" />
             <div className="relative">
-              <span className="text-violet-400 text-xs font-bold uppercase tracking-widest">Com Nexia</span>
+              <span className="text-[#D4B85C] text-xs font-bold uppercase tracking-widest">Com Nexia</span>
               <p className="text-white text-4xl font-extrabold mt-2 mb-1 font-display">5 min</p>
               <p className="text-zinc-400 text-sm">com a sua metodologia</p>
             </div>
