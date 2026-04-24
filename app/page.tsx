@@ -1,4 +1,4 @@
-// app/page.tsx
+import type { Metadata } from 'next'
 import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
@@ -13,7 +13,7 @@ import FinalCtaSection from '@/components/landing/FinalCtaSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Nexia Planning — Dossiês Estratégicos com IA para Mentores e Coaches',
   description:
     'Gere dossiês estratégicos personalizados para cada aluno em minutos, com a sua metodologia e a sua marca. White-label 100%. Sem código.',
