@@ -23,7 +23,7 @@ export default function ProblemSection() {
               por aluno, criado na mão
             </p>
           </div>
-          <div className="flex items-center justify-center text-zinc-600 text-2xl">
+          <div aria-hidden="true" className="flex items-center justify-center text-zinc-600 text-2xl">
             →
           </div>
           <div className="flex-1 bg-[#1a1a2e] border border-violet-700/40 rounded-xl p-6 text-left">

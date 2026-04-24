@@ -46,8 +46,8 @@ describe('HeroSection', () => {
 describe('ProblemSection', () => {
   it('renders the contrast data', () => {
     render(<ProblemSection />)
-    const contrastCards = screen.getAllByText(/3 horas|5 min/i)
-    expect(contrastCards.length).toBeGreaterThanOrEqual(2)
+    expect(screen.getAllByText(/3 horas/i)[0]).toBeInTheDocument()
+    expect(screen.getAllByText(/5 min/i)[0]).toBeInTheDocument()
     expect(screen.getByText(/com a sua metodologia/i)).toBeInTheDocument()
   })
 })
