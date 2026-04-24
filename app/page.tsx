@@ -11,7 +11,7 @@ import ForWhoSection from '@/components/landing/ForWhoSection'
 import SocialProofSection from '@/components/landing/SocialProofSection'
 import FinalCtaSection from '@/components/landing/FinalCtaSection'
 
-const DEMO_URL = 'https://nexia-planning.vercel.app'
+const DEMO_URL = 'https://nexia-planning.vercel.app/'
 
 export const metadata: Metadata = {
   title: 'Nexia Planning — Dossiês Estratégicos com IA para Mentores e Coaches',
