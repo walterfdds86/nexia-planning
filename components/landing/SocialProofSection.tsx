@@ -1,48 +1,182 @@
 // components/landing/SocialProofSection.tsx
 
-const STUDENTS = [
-  { name: 'Carla Mendes', niche: 'Marketing Digital', status: 'Concluído', statusColor: 'text-green-400 bg-green-400/10' },
-  { name: 'Rafael Costa', niche: 'Inteligência Artificial', status: 'Pendente', statusColor: 'text-yellow-400 bg-yellow-400/10' },
-  { name: 'Juliana Reis', niche: 'Coaching de Carreira', status: 'Concluído', statusColor: 'text-green-400 bg-green-400/10' },
-]
+const EMERALD = '#10b981'
+const EMERALD_DARK = '#059669'
 
-function BrowserFrame({ url, children }: { url: string; children: React.ReactNode }) {
+function PdfCover() {
   return (
-    <div className="bg-[#17171f] rounded-2xl border border-zinc-800 overflow-hidden shadow-xl shadow-black/30">
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-[#1a1a2e]">
-        <div className="flex gap-1.5 shrink-0">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-          <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-          <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+    <div
+      className="bg-white rounded-xl overflow-hidden flex flex-col shadow-2xl shadow-black/60 flex-shrink-0"
+      style={{ width: 200 }}
+    >
+      {/* Top green accent bar */}
+      <div className="h-1.5 flex-shrink-0" style={{ backgroundColor: EMERALD }} />
+
+      {/* Main content */}
+      <div className="flex-1 flex flex-col items-center justify-center px-5 py-7 text-center gap-3">
+        {/* Fingerprint/lock icon — replicates real PDF */}
+        <div
+          className="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center text-2xl flex-shrink-0"
+          style={{ boxShadow: `0 0 0 3px ${EMERALD}` }}
+        >
+          🔐
         </div>
-        <div className="flex-1 mx-2 bg-zinc-800/80 rounded px-3 py-1 text-zinc-500 text-xs truncate">
-          {url}
+
+        {/* Spaced title text matching PDF */}
+        <div className="space-y-0.5 mt-1">
+          <p className="text-gray-700 text-xs font-medium" style={{ letterSpacing: '0.3em' }}>
+            D O S S I Ê
+          </p>
+          <p className="text-xs font-medium" style={{ letterSpacing: '0.15em', color: EMERALD }}>
+            ESTRATÉGICO
+          </p>
+        </div>
+
+        <div className="w-10 border-t border-gray-200" />
+
+        {/* Expert name */}
+        <div>
+          <p className="text-gray-900 text-sm font-extrabold leading-tight tracking-wide">
+            WALTER<br />FERREIRA
+          </p>
+          <p className="text-xs font-medium mt-1" style={{ color: EMERALD }}>
+            Estratégias Digitais
+          </p>
+        </div>
+
+        <div className="w-10 border-t border-gray-200" />
+
+        {/* Student info */}
+        <div>
+          <p className="text-gray-400 text-xs">Elaborado para</p>
+          <p className="text-gray-800 text-sm font-bold mt-0.5">Ana Paula</p>
+          <p className="text-xs mt-0.5" style={{ color: EMERALD }}>
+            Coaching de Carreira
+          </p>
+          <p className="text-gray-300 text-xs mt-1">Versão 1 — 24/04/2026</p>
         </div>
       </div>
-      {children}
+
+      {/* Footer matching PDF */}
+      <div className="px-4 py-2 border-t border-gray-100">
+        <p className="text-gray-300 text-center" style={{ fontSize: 9 }}>
+          Estratégias Digitais — Direitos Reservados — 2026
+        </p>
+      </div>
+
+      {/* Bottom green accent bar */}
+      <div className="h-1.5 flex-shrink-0" style={{ backgroundColor: EMERALD }} />
     </div>
   )
 }
 
-function Sidebar({ active }: { active: string }) {
-  const items = ['Dashboard', 'Alunos', 'Dossiês Gerados', 'Configurações']
+function PdfContentPage() {
+  const rows = [
+    { scenario: 'Conservador', ticket: 'R$1.500', clients: '7', revenue: 'R$10.500', bg: 'white' },
+    { scenario: 'Realista', ticket: 'R$2.500', clients: '4', revenue: 'R$10.000', bg: '#f0fdf4' },
+    { scenario: 'Otimista', ticket: 'R$5.000', clients: '2', revenue: 'R$10.000', bg: 'white' },
+  ]
+
   return (
-    <div className="w-32 bg-[#0f0f13] border-r border-zinc-800 p-3 flex flex-col gap-0.5 shrink-0">
-      <p className="text-violet-400 text-xs font-bold mb-3 truncate leading-tight">
-        Estratégias<br />Digitais
-      </p>
-      {items.map((item) => (
-        <div
-          key={item}
-          className={`text-xs px-2 py-1.5 rounded truncate ${
-            item === active
-              ? 'text-white bg-violet-600/25 border border-violet-600/30'
-              : 'text-zinc-500'
-          }`}
-        >
-          {item}
+    <div className="bg-white rounded-xl overflow-hidden flex flex-col shadow-xl shadow-black/40">
+      {/* Page header — matches real PDF header */}
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100">
+        <div className="flex items-center gap-2">
+          <div
+            className="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0"
+            style={{ boxShadow: `0 0 0 1.5px ${EMERALD}` }}
+          >
+            <span style={{ fontSize: 11 }}>🔐</span>
+          </div>
+          <div>
+            <p className="text-gray-800 font-bold leading-none" style={{ fontSize: 10 }}>
+              DOSSIÊ ESTRATÉGICO
+            </p>
+            <p className="text-gray-400" style={{ fontSize: 9 }}>Walter Ferreira</p>
+          </div>
         </div>
-      ))}
+        <p className="text-gray-300" style={{ fontSize: 9 }}>2/6</p>
+      </div>
+
+      <div className="flex-1 p-4 space-y-4">
+        {/* Section 2 — POSICIONAMENTO ESTRATÉGICO */}
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-1 h-4 rounded-full flex-shrink-0" style={{ backgroundColor: EMERALD }} />
+            <h3 className="text-gray-900 font-bold uppercase tracking-wide" style={{ fontSize: 10 }}>
+              2. Posicionamento Estratégico
+            </h3>
+          </div>
+          <div className="space-y-1.5" style={{ fontSize: 11, lineHeight: '1.5' }}>
+            <p>
+              <span className="font-bold text-gray-800">Arquétipo de marca:</span>{' '}
+              <span className="text-gray-600">
+                O Sábio — conhecimento e experiência para guiar decisões informadas.
+              </span>
+            </p>
+            <p>
+              <span className="font-bold text-gray-800">Big Idea:</span>{' '}
+              <span className="text-gray-600 italic">
+                &ldquo;Transforme sua estratégia em um fluxo constante de leads qualificados com IA personalizada.&rdquo;
+              </span>
+            </p>
+            <p>
+              <span className="font-bold text-gray-800">Headline:</span>{' '}
+              <span className="text-gray-600">
+                &ldquo;Aumente seu faturamento com inteligência em marketing.&rdquo;
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-100" />
+
+        {/* Section 5 — CÁLCULO REVERSO */}
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-1 h-4 rounded-full flex-shrink-0" style={{ backgroundColor: EMERALD }} />
+            <h3 className="text-gray-900 font-bold uppercase tracking-wide" style={{ fontSize: 10 }}>
+              5. Cálculo Reverso — Meta R$10.000
+            </h3>
+          </div>
+          <table className="w-full border-collapse" style={{ fontSize: 11 }}>
+            <thead>
+              <tr style={{ backgroundColor: '#111827', color: 'white' }}>
+                <th className="text-left px-2 py-1.5 font-semibold">Cenário</th>
+                <th className="px-2 py-1.5 font-semibold text-center">Ticket</th>
+                <th className="px-2 py-1.5 font-semibold text-center">Clientes</th>
+                <th className="px-2 py-1.5 font-semibold text-center" style={{ color: EMERALD }}>
+                  Faturamento
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr
+                  key={row.scenario}
+                  className="border-b border-gray-100"
+                  style={{ backgroundColor: row.bg }}
+                >
+                  <td className="px-2 py-1.5 text-gray-700">{row.scenario}</td>
+                  <td className="px-2 py-1.5 text-center text-gray-500">{row.ticket}</td>
+                  <td className="px-2 py-1.5 text-center text-gray-500">{row.clients}</td>
+                  <td className="px-2 py-1.5 text-center font-semibold" style={{ color: EMERALD_DARK }}>
+                    {row.revenue}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Page footer */}
+      <div className="flex justify-between px-4 py-2 border-t border-gray-100">
+        <p className="text-gray-300" style={{ fontSize: 9 }}>
+          Estratégias Digitais — Direitos Reservados — 2026
+        </p>
+        <p className="text-gray-300" style={{ fontSize: 9 }}>Confidencial</p>
+      </div>
     </div>
   )
 }
@@ -53,113 +187,44 @@ export default function SocialProofSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <span className="inline-block bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4">
-            Sistema Real
+            Produto Real
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2 mb-4 font-display">
             Veja na prática como fica
           </h2>
           <p className="text-zinc-400 text-lg">
-            O sistema real. É isso que o seu aluno vai receber.
+            O dossiê que o seu aluno vai receber — gerado em 5 minutos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
+          {/* Left: PDF Cover */}
+          <div className="flex flex-col items-center gap-3 flex-shrink-0 mx-auto md:mx-0">
+            <PdfCover />
+            <span className="text-zinc-500 text-xs flex items-center gap-1.5">
+              <span
+                className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0"
+                style={{ backgroundColor: EMERALD }}
+              />
+              Capa do dossiê
+            </span>
+          </div>
 
-          {/* Mockup 1: tela de alunos */}
-          <BrowserFrame url="nexia-planning.vercel.app/alunos">
-            <div className="flex" style={{ height: 260 }}>
-              <Sidebar active="Alunos" />
-              <div className="flex-1 p-4 overflow-hidden">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-white text-xs font-semibold">Meus Alunos</span>
-                  <span className="bg-gradient-to-r from-violet-600 to-violet-500 text-white text-xs px-2.5 py-1 rounded-lg">
-                    + Novo Aluno
-                  </span>
-                </div>
-                <table className="w-full text-xs">
-                  <thead>
-                    <tr className="border-b border-zinc-800">
-                      <th className="text-left pb-2 text-zinc-500 font-normal">Nome</th>
-                      <th className="text-left pb-2 text-zinc-500 font-normal">Nicho</th>
-                      <th className="text-left pb-2 text-zinc-500 font-normal">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {STUDENTS.map((s) => (
-                      <tr key={s.name} className="border-b border-zinc-800/40 last:border-0">
-                        <td className="py-2 text-zinc-200 font-medium truncate max-w-[80px]">{s.name}</td>
-                        <td className="py-2 text-zinc-400 truncate max-w-[90px]">{s.niche}</td>
-                        <td className="py-2">
-                          <span className={`text-xs px-1.5 py-0.5 rounded ${s.statusColor}`}>
-                            {s.status}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="mt-3 pt-3 border-t border-zinc-800/40 grid grid-cols-2 gap-2">
-                  <div className="bg-zinc-800/40 rounded-lg p-2 text-center">
-                    <p className="text-white text-base font-bold">3</p>
-                    <p className="text-zinc-500 text-xs">Alunos</p>
-                  </div>
-                  <div className="bg-violet-600/10 border border-violet-600/20 rounded-lg p-2 text-center">
-                    <p className="text-violet-300 text-base font-bold">67%</p>
-                    <p className="text-zinc-500 text-xs">Concluídos</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </BrowserFrame>
-
-          {/* Mockup 2: trecho de dossiê gerado */}
-          <BrowserFrame url="nexia-planning.vercel.app/dossie/carla-mendes">
-            <div className="flex" style={{ height: 260 }}>
-              <Sidebar active="Dossiês Gerados" />
-              <div className="flex-1 p-4 overflow-hidden">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-5 h-5 rounded bg-gradient-to-br from-violet-600 to-violet-400 flex items-center justify-center shrink-0">
-                    <span className="text-white text-xs font-bold">N</span>
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-bold leading-none">Carla Mendes</p>
-                    <p className="text-zinc-500 text-xs">Marketing Digital</p>
-                  </div>
-                  <span className="ml-auto text-green-400 text-xs bg-green-400/10 px-2 py-0.5 rounded-full border border-green-400/20">
-                    ✓ Gerado
-                  </span>
-                </div>
-
-                <div className="space-y-2 overflow-hidden">
-                  <div className="bg-[#0f0f13] rounded-lg p-3 border border-zinc-800/60">
-                    <p className="text-violet-400 text-xs font-bold uppercase tracking-widest mb-1">
-                      Big Idea
-                    </p>
-                    <p className="text-zinc-300 text-xs leading-relaxed italic">
-                      &ldquo;Você não precisa de mais seguidores — precisa de um sistema que transforma os que já tem em clientes.&rdquo;
-                    </p>
-                  </div>
-                  <div className="bg-[#0f0f13] rounded-lg p-3 border border-zinc-800/60">
-                    <p className="text-violet-400 text-xs font-bold uppercase tracking-widest mb-1">
-                      Arquétipo de Marca
-                    </p>
-                    <p className="text-zinc-300 text-xs leading-relaxed">
-                      <span className="text-white font-semibold">O Estrategista</span> — guia com clareza, dados e método, não com ruído de mercado.
-                    </p>
-                  </div>
-                  <div className="bg-[#0f0f13] rounded-lg p-2.5 border border-zinc-800/60 flex items-center gap-2">
-                    <span className="text-zinc-500 text-xs">+ 9 seções geradas</span>
-                    <span className="ml-auto text-zinc-600 text-xs">📄 Baixar PDF</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </BrowserFrame>
-
+          {/* Right: PDF Content */}
+          <div className="flex-1 flex flex-col gap-3 min-w-0">
+            <PdfContentPage />
+            <span className="text-zinc-500 text-xs flex items-center gap-1.5">
+              <span
+                className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0"
+                style={{ backgroundColor: EMERALD }}
+              />
+              Conteúdo real gerado pela IA com a metodologia do mentor
+            </span>
+          </div>
         </div>
 
-        <p className="text-zinc-600 text-xs text-center mt-6">
-          Dados de demonstração · Acesse o sistema real e gere o seu próprio dossiê gratuitamente
+        <p className="text-zinc-600 text-xs text-center mt-8">
+          Dossiê de demonstração · Acesse o sistema e gere o seu gratuitamente
         </p>
       </div>
     </section>

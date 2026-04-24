@@ -1,8 +1,8 @@
 const CHAT_MESSAGES = [
-  { role: 'mentor', text: 'Muda a cor principal para roxo' },
-  { role: 'ai', text: '✓ Cor primária atualizada para #7c3aed em toda a plataforma.' },
-  { role: 'mentor', text: 'Adiciona o meu logo no cabeçalho do PDF' },
-  { role: 'ai', text: '✓ Logo inserida. Prévia do PDF atualizada.' },
+  { role: 'mentor', text: 'Muda a cor principal para roxo', delay: '0.2s' },
+  { role: 'ai', text: '✓ Cor primária atualizada para #7c3aed em toda a plataforma.', delay: '0.9s' },
+  { role: 'mentor', text: 'Adiciona o meu logo no cabeçalho do PDF', delay: '1.7s' },
+  { role: 'ai', text: '✓ Logo inserida. Prévia do PDF atualizada.', delay: '2.5s', cursor: true },
 ]
 
 export default function NoCodeSection() {
@@ -38,7 +38,8 @@ export default function NoCodeSection() {
             {CHAT_MESSAGES.map((msg, i) => (
               <div
                 key={i}
-                className={`flex gap-3 ${msg.role === 'mentor' ? 'justify-end' : 'justify-start'}`}
+                className={`chat-msg flex gap-3 ${msg.role === 'mentor' ? 'justify-end' : 'justify-start'}`}
+                style={{ animationDelay: msg.delay }}
               >
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
@@ -48,6 +49,12 @@ export default function NoCodeSection() {
                   }`}
                 >
                   {msg.text}
+                  {msg.cursor && (
+                    <span
+                      className="cursor-blink inline-block w-0.5 h-3.5 bg-zinc-400 ml-1 align-middle rounded-full"
+                      style={{ animationDelay: '3.2s' }}
+                    />
+                  )}
                 </div>
               </div>
             ))}
