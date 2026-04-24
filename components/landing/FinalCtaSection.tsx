@@ -26,7 +26,7 @@ export default function FinalCtaSection({ demoUrl }: FinalCtaSectionProps) {
         />
 
         <div className="flex items-center justify-center gap-6 mt-6 text-violet-300 text-sm">
-          <span>🔒 Acesso seguro</span>
+          <span><span aria-hidden="true">🔒</span> Acesso seguro</span>
           <span>·</span>
           <span>Sem compromisso</span>
           <span>·</span>

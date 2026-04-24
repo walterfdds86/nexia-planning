@@ -21,9 +21,9 @@ export default function EconomicsSection() {
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-[#17171f]">
-                <th className="text-left px-6 py-4 text-zinc-500 font-medium"></th>
-                <th className="px-6 py-4 text-red-400 font-semibold">Hoje (manual)</th>
-                <th className="px-6 py-4 text-violet-400 font-semibold">Com Nexia</th>
+                <th scope="col" aria-label="Métrica" className="text-left px-6 py-4 text-zinc-500 font-medium"></th>
+                <th scope="col" className="px-6 py-4 text-red-400 font-semibold">Hoje (manual)</th>
+                <th scope="col" className="px-6 py-4 text-violet-400 font-semibold">Com Nexia</th>
               </tr>
             </thead>
             <tbody>
@@ -32,7 +32,7 @@ export default function EconomicsSection() {
                   key={row.label}
                   className={i % 2 === 0 ? 'bg-[#0f0f13]' : 'bg-[#17171f]'}
                 >
-                  <td className="text-left px-6 py-4 text-zinc-400">{row.label}</td>
+                  <th scope="row" className="text-left px-6 py-4 text-zinc-400 font-normal">{row.label}</th>
                   <td className="px-6 py-4 text-red-300 text-center">{row.today}</td>
                   <td className="px-6 py-4 text-violet-300 text-center font-semibold">{row.nexia}</td>
                 </tr>
