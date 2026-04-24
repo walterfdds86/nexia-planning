@@ -78,14 +78,14 @@ describe('WhiteLabelSection', () => {
   it('renders white-label key message', () => {
     render(<WhiteLabelSection />)
     expect(screen.getByText(/aluno nunca sabe/i)).toBeInTheDocument()
-    expect(screen.getByText(/500K caracteres/i)).toBeInTheDocument()
+    expect(screen.getByText(/identidade é toda sua/i)).toBeInTheDocument()
   })
 })
 
 describe('NoCodeSection', () => {
   it('renders no-code message', () => {
     render(<NoCodeSection />)
-    expect(screen.getByText(/não precisa saber programar/i)).toBeInTheDocument()
+    expect(screen.getByText(/configura tudo sozinho/i)).toBeInTheDocument()
     expect(screen.getByText(/muda a cor principal/i)).toBeInTheDocument()
   })
 })

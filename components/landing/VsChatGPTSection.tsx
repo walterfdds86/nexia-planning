@@ -2,9 +2,9 @@ import { XCircle, CheckCircle2 } from 'lucide-react'
 
 const ROWS = [
   {
-    feature: 'Metodologia injetada automaticamente',
+    feature: 'Sua metodologia em cada dossiê',
     without: 'Cola manual a cada nova conversa',
-    with: 'Até 500K caracteres da sua metodologia em todos os dossiês',
+    with: 'Seus materiais e frameworks aplicados automaticamente em todos os dossiês',
   },
   {
     feature: 'PDF com a sua identidade visual',

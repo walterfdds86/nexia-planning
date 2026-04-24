@@ -6,7 +6,7 @@ import { Plus, Minus } from 'lucide-react'
 const FAQS = [
   {
     q: 'O dossiê vai soar como eu, ou vai parecer texto genérico de IA?',
-    a: 'Você injeta sua metodologia, seus frameworks e exemplos de como você escreve — são até 500 mil caracteres de contexto. O sistema usa isso como base para cada geração. Quanto mais material você inserir, mais próximo do seu estilo o output fica. A maioria dos mentores relata que precisou ajustar mínimos detalhes ou nada na primeira geração.',
+    a: 'Você insere sua metodologia, seus frameworks e exemplos de como você escreve — pode ser uma quantidade enorme de conteúdo, desde cursos e scripts até exemplos reais de planos que você já entregou. O sistema usa tudo isso como base para cada geração. A maioria dos mentores relata que precisou ajustar mínimos detalhes ou nada na primeira geração.',
   },
   {
     q: 'Como minha metodologia entra no sistema?',
@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: 'Qual é o custo depois do acesso de teste?',
-    a: 'O acesso demo é gratuito e sem cartão de crédito — você já pode gerar seu primeiro dossiê real agora. O custo de API por documento gerado fica entre R$0,50 e R$2,00, dependendo do modelo de IA escolhido. Os planos da plataforma são apresentados dentro do sistema após o período de testes.',
+    a: 'O acesso demo é gratuito e sem cartão de crédito — você já pode gerar seu primeiro dossiê real agora. Cada dossiê gerado custa entre R$0,50 e R$2,00 dependendo do conteúdo, valor muito abaixo do que você cobra por um plano de ação. Os planos da plataforma são apresentados dentro do sistema após o período de testes.',
   },
 ]
 

@@ -14,7 +14,7 @@ export default function EconomicsSection() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4B85C] to-[#C9A84C]">
             R$0,50 e R$2,00
           </span>{' '}
-          de API.
+          por dossiê gerado.
         </h2>
         <p className="text-gray-600 text-lg mb-12">Você cobra o que quiser por cima.</p>
 
