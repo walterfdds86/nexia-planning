@@ -131,3 +131,18 @@ describe('FinalCtaSection', () => {
     expect(screen.getByText(/sem cartão de crédito/i)).toBeInTheDocument()
   })
 })
+
+import LandingPage from '@/app/page'
+
+describe('LandingPage (app/page.tsx)', () => {
+  it('renders without crashing', () => {
+    const { container } = render(<LandingPage />)
+    expect(container.firstChild).not.toBeNull()
+  })
+
+  it('contains main CTA button in the hero', () => {
+    render(<LandingPage />)
+    const heroLinks = screen.getAllByRole('link', { name: /quero testar gratuitamente/i })
+    expect(heroLinks.length).toBeGreaterThanOrEqual(1)
+  })
+})
