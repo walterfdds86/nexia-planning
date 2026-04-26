@@ -1,8 +1,7 @@
 // components/landing/SocialProofSection.tsx
-// TODO: Replace DOSSIER_EXAMPLE_URL with the actual Google Drive or hosted PDF link
 import { FileDown } from 'lucide-react'
 
-const DOSSIER_EXAMPLE_URL = '#'
+const DOSSIER_EXAMPLE_URL = '/dossie-exemplo.pdf'
 
 const EMERALD = '#10b981'
 const EMERALD_DARK = '#059669'
