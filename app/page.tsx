@@ -1,20 +1,25 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import AnnouncementBar from '@/components/landing/AnnouncementBar'
 import HeroSection from '@/components/landing/HeroSection'
 import ProblemSection from '@/components/landing/ProblemSection'
 import HowItWorksSection from '@/components/landing/HowItWorksSection'
+import JourneySection from '@/components/landing/JourneySection'
 import SystemShowcaseSection from '@/components/landing/SystemShowcaseSection'
 import DeliverablesSection from '@/components/landing/DeliverablesSection'
 import WhiteLabelSection from '@/components/landing/WhiteLabelSection'
 import NoCodeSection from '@/components/landing/NoCodeSection'
 import EconomicsSection from '@/components/landing/EconomicsSection'
-import ForWhoSection from '@/components/landing/ForWhoSection'
 import VsChatGPTSection from '@/components/landing/VsChatGPTSection'
+import ForWhoSection from '@/components/landing/ForWhoSection'
+import PricingSection from '@/components/landing/PricingSection'
 import SocialProofSection from '@/components/landing/SocialProofSection'
 import FAQSection from '@/components/landing/FAQSection'
 import FinalCtaSection from '@/components/landing/FinalCtaSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app/'
+// TODO: Replace with payment link (Hotmart, Stripe etc.) when available
+const PURCHASE_URL =
+  'https://wa.me/5561999354363?text=Ol%C3%A1%2C%20quero%20implementar%20o%20Nexia%20Planning%20para%20meus%20alunos'
 
 export const metadata: Metadata = {
   title: 'Nexia Planning — Dossiês Estratégicos com IA para Mentores e Coaches',
@@ -54,6 +59,7 @@ export default function LandingPage() {
       <HeroSection demoUrl={DEMO_URL} />
       <ProblemSection />
       <HowItWorksSection />
+      <JourneySection />
       <SystemShowcaseSection />
       <DeliverablesSection />
       <WhiteLabelSection />
@@ -61,6 +67,7 @@ export default function LandingPage() {
       <EconomicsSection />
       <VsChatGPTSection />
       <ForWhoSection />
+      <PricingSection purchaseUrl={PURCHASE_URL} demoUrl={DEMO_URL} />
       <SocialProofSection />
       <FAQSection />
       <FinalCtaSection demoUrl={DEMO_URL} />

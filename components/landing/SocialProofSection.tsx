@@ -1,4 +1,8 @@
 // components/landing/SocialProofSection.tsx
+// TODO: Replace DOSSIER_EXAMPLE_URL with the actual Google Drive or hosted PDF link
+import { FileDown } from 'lucide-react'
+
+const DOSSIER_EXAMPLE_URL = '#'
 
 const EMERALD = '#10b981'
 const EMERALD_DARK = '#059669'
@@ -223,9 +227,19 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        <p className="text-gray-400 text-xs text-center mt-8">
-          Dossiê de demonstração · Acesse o sistema e gere o seu gratuitamente
-        </p>
+        {/* Download CTA */}
+        <div className="flex flex-col items-center gap-3 mt-10">
+          <a
+            href={DOSSIER_EXAMPLE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 bg-white border-2 border-[#C9A84C]/40 text-[#92650A] hover:border-[#C9A84C] hover:bg-amber-50 font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm shadow-sm"
+          >
+            <FileDown size={16} strokeWidth={1.5} aria-hidden="true" />
+            Baixar dossiê de exemplo (PDF)
+          </a>
+          <p className="text-gray-400 text-xs">Documento real gerado pela plataforma</p>
+        </div>
       </div>
     </section>
   )
