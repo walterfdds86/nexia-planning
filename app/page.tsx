@@ -7,17 +7,15 @@ import JourneySection from '@/components/landing/JourneySection'
 import SystemShowcaseSection from '@/components/landing/SystemShowcaseSection'
 import DeliverablesSection from '@/components/landing/DeliverablesSection'
 import WhiteLabelSection from '@/components/landing/WhiteLabelSection'
-import NoCodeSection from '@/components/landing/NoCodeSection'
 import EconomicsSection from '@/components/landing/EconomicsSection'
 import VsChatGPTSection from '@/components/landing/VsChatGPTSection'
 import ForWhoSection from '@/components/landing/ForWhoSection'
-import PricingSection from '@/components/landing/PricingSection'
 import SocialProofSection from '@/components/landing/SocialProofSection'
+import PricingSection from '@/components/landing/PricingSection'
 import FAQSection from '@/components/landing/FAQSection'
 import FinalCtaSection from '@/components/landing/FinalCtaSection'
 
 const DEMO_URL = 'https://nexia-planning.vercel.app/'
-// TODO: Replace with payment link (Hotmart, Stripe etc.) when available
 const PURCHASE_URL =
   'https://wa.me/5561999354363?text=Ol%C3%A1%2C%20quero%20implementar%20o%20Nexia%20Planning%20para%20meus%20alunos'
 
@@ -63,12 +61,11 @@ export default function LandingPage() {
       <SystemShowcaseSection />
       <DeliverablesSection />
       <WhiteLabelSection />
-      <NoCodeSection />
       <EconomicsSection />
       <VsChatGPTSection />
       <ForWhoSection />
-      <PricingSection purchaseUrl={PURCHASE_URL} demoUrl={DEMO_URL} />
       <SocialProofSection />
+      <PricingSection purchaseUrl={PURCHASE_URL} demoUrl={DEMO_URL} />
       <FAQSection />
       <FinalCtaSection demoUrl={DEMO_URL} />
 

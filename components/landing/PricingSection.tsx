@@ -1,5 +1,4 @@
 import { Check, ShieldCheck, Shield } from 'lucide-react'
-import CtaButton from './CtaButton'
 
 interface PricingSectionProps {
   purchaseUrl: string
@@ -66,16 +65,29 @@ export default function PricingSection({ purchaseUrl, demoUrl }: PricingSectionP
               </p>
             </div>
 
-            <CtaButton href={purchaseUrl} label="Quero implementar agora" />
+            {/* Two clear options */}
+            <div className="space-y-3">
+              <a
+                href={purchaseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#C9A84C] to-[#B8962E] hover:from-[#D4B85C] hover:to-[#C9A84C] text-[#1a1000] font-bold px-6 py-4 rounded-xl transition-all duration-200 text-sm shadow-lg shadow-[#C9A84C]/20"
+              >
+                Falar pelo WhatsApp para implementar
+              </a>
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full border border-white/15 text-zinc-300 hover:border-white/30 hover:text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 text-sm"
+              >
+                Prefiro testar o sistema antes
+              </a>
+            </div>
 
-            <p className="text-zinc-500 text-xs text-center mt-4 flex items-center justify-center gap-1.5">
+            <p className="text-zinc-600 text-xs text-center mt-4 flex items-center justify-center gap-1.5">
               <ShieldCheck size={12} strokeWidth={1.5} aria-hidden="true" />
-              <span>
-                Ainda em dúvida?{' '}
-                <a href={demoUrl} className="text-[#C9A84C] hover:underline">
-                  Teste o demo gratuitamente primeiro
-                </a>
-              </span>
+              Acesso ao demo é gratuito e sem compromisso
             </p>
           </div>
         </div>

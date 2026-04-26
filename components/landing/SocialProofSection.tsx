@@ -226,19 +226,19 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        {/* Download CTA */}
-        <div className="flex flex-col items-center gap-3 mt-10">
+        {/* Discrete PDF link */}
+        <p className="text-gray-400 text-xs text-center mt-8 flex items-center justify-center gap-1.5">
+          Quer ver o documento completo?{' '}
           <a
             href={DOSSIER_EXAMPLE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 bg-white border-2 border-[#C9A84C]/40 text-[#92650A] hover:border-[#C9A84C] hover:bg-amber-50 font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm shadow-sm"
+            className="inline-flex items-center gap-1 text-[#C9A84C] hover:underline font-medium"
           >
-            <FileDown size={16} strokeWidth={1.5} aria-hidden="true" />
-            Baixar dossiê de exemplo (PDF)
+            <FileDown size={12} strokeWidth={1.5} aria-hidden="true" />
+            Baixar PDF de exemplo
           </a>
-          <p className="text-gray-400 text-xs">Documento real gerado pela plataforma</p>
-        </div>
+        </p>
       </div>
     </section>
   )

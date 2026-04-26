@@ -2,10 +2,10 @@ import { Palette, BookMarked, Wand2, Bot } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 const FEATURES: { Icon: LucideIcon; text: string }[] = [
-  { Icon: Palette,     text: 'Seu nome, sua logo, suas cores no PDF' },
-  { Icon: BookMarked,  text: 'Até 500K caracteres da sua metodologia injetados em cada geração' },
-  { Icon: Wand2,       text: 'Prompt personalizado: o dossiê soa exatamente como você escreveria' },
-  { Icon: Bot,         text: 'Funciona com Claude, GPT-4o ou Gemini — você escolhe' },
+  { Icon: Palette,    text: 'Seu nome, sua logo, suas cores no dossiê — a identidade é toda sua' },
+  { Icon: BookMarked, text: 'Seus materiais, frameworks e linguagem incorporados em cada geração' },
+  { Icon: Wand2,      text: 'O dossiê soa exatamente como você escreveria — porque usa a sua voz' },
+  { Icon: Bot,        text: 'Compatível com os melhores modelos de IA do mercado — você escolhe qual usar' },
 ]
 
 export default function WhiteLabelSection() {
@@ -20,7 +20,7 @@ export default function WhiteLabelSection() {
             O aluno nunca sabe que é uma plataforma terceirizada.
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-            O sistema aprende a sua metodologia. Você injeta seus materiais,
+            O sistema aprende a sua metodologia. Você insere seus materiais,
             frameworks e linguagem. O aluno recebe um documento que parece ter
             sido escrito por você — porque, na prática, foi.
           </p>

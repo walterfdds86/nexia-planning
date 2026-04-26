@@ -1,8 +1,8 @@
-﻿const CHAT_MESSAGES = [
-  { role: 'mentor', text: 'Muda a cor principal para roxo', delay: '0.2s' },
-  { role: 'ai', text: '✓ Cor primária atualizada para #7c3aed em toda a plataforma.', delay: '0.9s' },
-  { role: 'mentor', text: 'Adiciona o meu logo no cabeçalho do PDF', delay: '1.7s' },
-  { role: 'ai', text: '✓ Logo inserida. Prévia do PDF atualizada.', delay: '2.5s', cursor: true },
+const CHAT_MESSAGES = [
+  { role: 'mentor', text: 'Muda a cor principal para verde', delay: '0.2s' },
+  { role: 'ai', text: '✓ Cor principal atualizada para verde em toda a plataforma.', delay: '0.9s' },
+  { role: 'mentor', text: 'Adiciona o meu logo no cabeçalho do dossiê', delay: '1.7s' },
+  { role: 'ai', text: '✓ Logo inserida. O dossiê já está com a sua marca.', delay: '2.5s', cursor: true },
 ]
 
 export default function NoCodeSection() {
@@ -11,15 +11,15 @@ export default function NoCodeSection() {
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <span className="inline-block bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1 text-[#E0C870] text-xs font-bold uppercase tracking-wider mb-4">
-            Zero Código
+            Configuração Simples
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-3 mb-4 font-display">
-            Você não precisa saber programar. Nem um pouco.
+            Você configura tudo sozinho, em menos de 1 hora.
           </h2>
           <p className="text-zinc-400 text-lg leading-relaxed">
-            Toda personalização é feita conversando com a IA em português. Em
-            menos de 1 hora, a plataforma está com a sua cara — nome, cores,
-            logo, prompt, tudo configurado.
+            Toda personalização é feita conversando com a IA em português.
+            Nome, cores, logo e linguagem — tudo com a sua cara, sem depender
+            de ninguém.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export default function NoCodeSection() {
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
             </div>
-            <span className="text-zinc-600 text-xs ml-1">Nexia AI — Configuração</span>
+            <span className="text-zinc-600 text-xs ml-1">Nexia AI — Personalização</span>
           </div>
 
           <div className="p-5 space-y-3">

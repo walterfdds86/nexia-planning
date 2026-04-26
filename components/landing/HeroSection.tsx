@@ -24,7 +24,7 @@ export default function HeroSection({ demoUrl }: HeroSectionProps) {
         <div className="inline-flex items-center gap-2 bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-4 py-1.5 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-[#D4B85C] animate-pulse" />
           <span className="text-[#E0C870] text-xs font-semibold tracking-widest uppercase">
-            White-label · Zero Código · IA
+            Sua Marca · Sua Voz · IA
           </span>
         </div>
 
